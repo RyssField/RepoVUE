@@ -99,23 +99,6 @@
 
     methods: {
 
-        async getUsuarios() {
-            try {
-                const response = await fetch('http://localhost:3000/usuarios');
-                if (!response.ok) {
-                    throw new Error('Error en la solicitud: ' + response.statusText);
-                }
-
-                // Obtener y ordenar usuarios por apellidos y luego por nombre
-                this.usuarios = (await response.json()).sort((a, b) =>
-                    a.apellidos.localeCompare(b.apellidos) || a.nombre.localeCompare(b.nombre)
-                );
-
-                } catch (error) {
-                    console.error(error);
-                }
-            },
-
 
         async iniciarSesion() {
             // Buscar el usuario con el DNI proporcionado
