@@ -166,6 +166,24 @@ export default {
             }
         },
 
+        mostrarAlerta(titulo, mensaje, icono) {
+            Swal.fire({
+                title: titulo,
+                text: mensaje,
+                icon: icono,
+                customClass: {
+                    container: 'custom-alert-container',
+                    popup: 'custom-alert-popup',
+                    modal: 'custom-alert-modal',
+                }
+            });
+        },
+
+        handleFileChange(event) {
+            this.cv = event.target.files[0];
+            console.log(this.cv);
+        },
+
         async getCandidatos() {
             try {
                 const response = await fetch('http://localhost:3000/candidatos');
@@ -175,6 +193,61 @@ export default {
                 this.candidatos = await response.json();
             } catch (error) {
                 console.log(error);
+            }
+        },
+
+        async altaCandidato() {
+            if (this.empleado.apellidos && this.empleado.nombre && this.empleado.movil && this.empleado.email && this.empleado.departamento && this.empleado.modalidad && this.empleado.avisoLegal) {
+                if (!this.validarEmail(this.empleado.email) || !this.validarMovil(this.empleado.movil)) {
+                    return;
+                }
+
+                try {
+                    const crearResponse = await fetch('http://localhost:3000/candidatos', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(this.empleado),
+                    });
+
+                    if (!crearResponse.ok) {
+                        throw new Error(`Error al dar de alta al empleado ${crearResponse.statusText}`);
+                    }
+
+                    if (this.cv) {
+                        const formdata = new FormData;
+                        const candidatoId = this.empleado.movil || 'default';
+                        const nuevoArchivo = new File([this.cv], `${candidatoId}.pdf`, { type: this.cv.type })
+                        formdata.append("archivo", nuevoArchivo);
+                        formdata.append("candidatoId", candidatoId)
+                        console.log(nuevoArchivo);
+                        const uploadResponse = await fetch('http://localhost:5000/subircv', {
+                            method: 'POST',
+                            body: formdata,
+                            credentials: 'include'
+                        });
+
+                        if (!uploadResponse.ok) {
+                            throw new Error(`Error al subir el cv ${uploadResponse.statusText}`);
+                        } else {
+                            console.log('hubo respuesta: ', uploadResponse);
+                        }
+                    }
+
+                    const nuevoCandidato = await crearResponse.json();
+                    this.candidatos.push(nuevoCandidato);
+                    this.mostrarAlerta('Aviso', 'Candidato guardado con éxito', 'success');
+                    this.getCandidatos();
+
+                } catch(error) {
+                    console.error(error);
+                    this.mostrarAlerta('Error', 'No se pudo dar de alta al empleado', 'error');
+                }
+            } else if (!this.empleado.avisoLegal) {
+                this.mostrarAlerta('Aviso', 'Debe aceptar las políticas de privacidad', 'info');
+            } else {
+                this.mostrarAlerta('Error', 'Por favor, completa todos los campos', 'error');
             }
         },
 

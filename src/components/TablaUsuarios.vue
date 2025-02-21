@@ -157,42 +157,7 @@ export default {
     },
 
     methods: {
-        validarDNI(dni) {
-            if (dni === '') {
-                return true;
-            }
 
-            dni = dni.toUpperCase();
-            this.usuario.dni = dni;
-            const dniRegex = /^[XYZ0-9][0-9]{7}[A-Z]$/;
-            
-            if (!dniRegex.test(dni)) {
-                this.mostrarAlerta('Error', 'El NIE/DNI con formato no válido.', 'error');
-                return false;
-            }
-
-            let dniNum = dni.substring(0, 8);
-            const letra = dni.charAt(8);
-            if (dniNum.charAt(0) == 'X') {
-                dniNum = dniNum.substring(1, 8);
-                dniNum =  '0' + dniNum;
-            } else if (dniNum.charAt(0) == 'Y') {
-                dniNum = dniNum.substring(1, 8);
-                dniNum =  '1' + dniNum;
-            } else if (dniNum.charAt(0) == 'Z') {
-                dniNum = dniNum.substring(1, 8);
-                dniNum =  '2' + dniNum;
-            }
-
-            const letras = 'TRWAGMYFPDXBNJZSQVHLCKE';
-            const letraCalculada = letras[dniNum % 23];
-            if (letra !== letraCalculada) {
-                this.mostrarAlerta('Error', 'DNI/NIE Incorrecto.', 'error');
-                return false;
-            }
-
-            return true;            
-        },
 
         validarEmail(email) {
             const emailPattern = /^[a-zA-Z0-9]+([._-]?[a-zA-Z0-9]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z]{2,})+$/;
@@ -262,19 +227,6 @@ export default {
             } catch (error) {
                 console.error(error);
             }
-        },
-
-        mostrarAlerta(titulo, mensaje, icono) {
-            Swal.fire({
-                title: titulo,
-                text: mensaje,
-                icon: icono,
-                customClass: {
-                    container: 'custom-alert-container',
-                    popup: 'custom-alert-popup',
-                    modal: 'custom-alert-modal',
-                }
-            });
         },
 
         async altaUsuario() {
