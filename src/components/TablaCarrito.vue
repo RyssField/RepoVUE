@@ -84,6 +84,13 @@ export default {
     },
 
     methods: {
+        calcularTotal() {
+            let total = 0
+            this.data.getCartItems.forEach(element => {
+                total += element.quantity * element.precio;
+            });
+            return total;
+        },
 
         async getArticulos() {
             try {
