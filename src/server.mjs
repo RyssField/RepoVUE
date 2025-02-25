@@ -39,6 +39,44 @@ app.get('/', (req, res) =>  {
 
 app.set('port', process.env.PORT || 5000);
 
+app.post("/crear-checkout-session", async(req, res) => {
+    try {
+        const {items, amount} = req.body;
+
+        if (!items || !Array.isArray(items) || items.length === 0) {
+            return  res.status(400).json({ error: "Debe haber, al menos, un producto en el carrito." });
+        }
+
+        if (!amount || isNaN(amount) || amount <= 0) {
+            return res.status(400).json({ error: "Monto inválido" });
+        }
+
+        const lineItems = items.map(item => ({
+            price_data: {
+                currency: 'eur',
+                product_data: {
+                    name: item.nombre,
+                },
+                unit_amount: item.precio * 100,
+            },
+            quantity: item.quantity,
+        }));
+
+        const session = await stripe.checkout.sessions.create({
+            payment_method_types: ['card'],
+            line_items: lineItems,
+            mode: 'payment',
+            success_url: "http://localhost:8080/success",
+            cancel_url: "http://localhost:8080/cancel",
+        });
+
+        res.json({ id: session.id });
+    } catch(error) {
+        console.error("Error al crear la sesión de pago:", error);
+        res.status(500).json({ error: "Error en el servidor" });
+    }
+});
+
 server.listen(app.get('port'), () => {
     console.log(`Servidor corriendo en puerto ... ${app.get('port')}`)
 });
