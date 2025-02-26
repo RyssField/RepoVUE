@@ -19,6 +19,17 @@ const createStorage = (folder) => multer.diskStorage({
     }
 });
 
+const imageFileFilter = (req, file, cb) => {
+    const ext = path.extname(file.originalname).toLowerCase();
+    console.log(ext);
+    console.log(file.originalname);
+    if (ext === '.png' || ext === '.jpg' || ext === '.jpeg') {
+        cb(null, true);
+    } else {
+        cb(new Error('Solo se permiten archivos PNG o JPG'), false);
+    }
+};
+
 const cvFileFilter = (req, file, cb) => {
     const ext = path.extname(file.originalname).toLocaleLowerCase();
     if (ext === '.pdf') {
@@ -27,6 +38,18 @@ const cvFileFilter = (req, file, cb) => {
         cb(new Error('Solo se permiten archivos PDF'), false);
     }
 };
+
+const uploadImage = multer({
+    storage: createStorage('uploads/img'),
+    fileFilter: imageFileFilter,
+    limits: { fileSize: 5 * 1024 * 1024 }
+});
+
+const uploadCV = multer({
+    storage: createStorage('uploads/cv'),
+    fileFilter: cvFileFilter,
+    limits: { fileSize: 10 * 1024 * 1024 }
+});
 
 rutas.post('/subirimg', uploadImage.single('image'), (req, res) => {
     res.status(200).json({ message: 'Imagen subida correctamente', file: req.file })

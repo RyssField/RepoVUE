@@ -100,33 +100,6 @@ export default {
                 console.log(error);
             }
         },
-
-        async finalizarPago() {
-            console.log("init finalizarPago");
-            const stripe = await loadStripe(process.env.VUE_APP_STRIPE_PUBLIC_KEY);
-            console.log("enviando al backend:", JSON.stringify({ items: this.data.getCartItems}));
-
-            const response = await fetch("http://localhost:5000/crear-checkout-session", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ items: this.data.getCartItems, amount: this.calcularTotal() }),
-            });
-
-            const session = await response.json();
-            console.log("Session response:", session);
-            if (!session.id) {
-                console.error("No se recibión sessionId de Stripe.");
-            }
-
-            const { error } = await stripe.redirectToCheckout({
-                sessionId: session.id,
-            });
-
-            if (error) {
-                console.error("Error en el pago:", error);
-            }
-        }
-    },
     
     computed: {
         articulosFiltrados() {

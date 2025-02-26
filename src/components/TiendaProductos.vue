@@ -8,28 +8,6 @@
                 <input type="radio" class="btn-check" name="options" :id="'option-' + categoria" v-model="categoriaFiltrada" :value="categoria" autocomplete="off">
                 <label class="btn btn-success me-2" :for="'option-' + categoria">{{ categoria }}</label>
             </template>
-
-            <table class="table">
-                <tbody>
-                    <tr v-for="articulo in articulosFiltrados" :key="articulo._id">
-                        <td class="text-center">{{ articulo._id.substring(0, 5) }}</td>
-                        <td class="text-center"><img :src="`http://localhost:5000/uploads/img/${articulo._id}.${articulo.extImagen}`" /></td>
-                        <td class="text-center">{{ articulo.nombre }}</td>
-                        <td class="text-center">{{ articulo.categoria }}</td>
-                        <td class="text-center">{{ articulo.descripcion }}</td>
-                        <td class="text-center">{{ articulo.precio }}€</td>
-                        <td class="text-center">{{ articulo.stock }} en stock</td>
-                        <td class="text-center">
-                            <div>
-                                <button class="btn btn-success m-2" @click="data.addToCart(articulo)" :disabled="!isLoggedIn">
-                                    Añadir al carrito
-                                    <i class="bi bi-cart-fill"></i>
-                                </button>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
         </div>
     </div>
 </template>
