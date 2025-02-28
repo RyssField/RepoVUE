@@ -160,6 +160,37 @@ export default {
             return true;
         },
 
+        validarMovil(movil) {
+            const movilRegex = /^[67]\d{8}$/;
+            if (!movilRegex.test(movil)) {
+                this.mostrarAlerta('Error', 'Formato de número de móvil no válido', 'error');
+                this.movilMismatch = true;
+                return false;
+            }
+            this.movilMismatch = false;
+            return true;
+        },
+
+        validarRepetido(email) {
+            if (this.usuario.email !== email) {
+                this.mostrarAlerta('Error', 'Los correos no coinciden', 'error');
+                this.emailRepetidoMismatch = true;
+                return false;
+            }
+            this.emailRepetidoMismatch = false;
+            return true;
+        },
+
+        validarContrasenaRepetida(contrasena) {
+            if (this.usuario.pass !== contrasena) {
+                this.mostrarAlerta('Error', 'Las contraseñas no coinciden', 'error');
+                this.passRepetidaMismatch = true;
+                return false;
+            }
+            this.passRepetidaMismatch = false;
+            return true;
+        },
+
         async getUsuarios() {
             try {
                 const response = await fetch('http://localhost:3000/usuarios');
