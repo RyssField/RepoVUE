@@ -254,6 +254,54 @@ export default {
             });
         },
 
+        async altaUsuario() {
+            if (this.usuario.dni && this.usuario.apellidos && this.usuario.nombre && this.usuario.email && this.usuario.movil) {
+                if (!this.validarDNI(this.usuario.dni) || !this.validarEmail(this.usuario.email) || !this.validarMovil(this.usuario.movil) || !this.validarRepetido(this.emailRepetido) || !this.validarContrasenaRepetida(this.passRepetida)) {
+                    return;
+                }
+                
+                try {
+                    this.usuario.baja = '';
+                    this.usuario.tipo = this.tipos[0];
+                    this.usuario.alta = new Date().toISOString().split('T')[0];
+                    const response = await fetch('http://localhost:3000/usuarios');
+                    if (!response.ok) {
+                        throw new Error('Error al obtener los datos de los usuarios: ' + response.statusText);
+                    }
+                    
+                    const usuariosExistentes = await response.json();
+
+                    const usuarioExistente = usuariosExistentes.find(usuario => usuario.dni === this.usuario.dni);
+                    
+                    if (usuarioExistente) {
+                        this.mostrarAlerta('Error', 'El DNI ya está registrado.', 'error');
+                    } else {
+                        this.usuario.pass = await passport.encriptarContrasena(this.usuario.pass);
+                        const crearResponse = await fetch('http://localhost:3000/usuarios', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify(this.usuario),
+                        });
+
+                        if (!crearResponse.ok) {
+                            throw new Error(`Error al dar de alta al usuario ${crearResponse.statusText}`);
+                        }
+
+                        const nuevoUsuario = await crearResponse.json();
+                        this.usuarios.push(nuevoUsuario);
+                        this.mostrarAlerta('Aviso', 'Usuario dado de alta', 'success');
+                    }
+                } catch(error) {
+                    console.error(error);
+                    this.mostrarAlerta('Error', 'No se pudo dar de alta al usuario','error');
+                }
+            } else {
+                this.mostrarAlerta('Error', 'Por favor, completa todos los campos requeridos.', 'error');
+            }
+        },
+
         obtenerFechaHoy() {
             const fecha = new Date();
             const opciones = { day: '2-digit', month: '2-digit', year: 'numeric' };

@@ -115,45 +115,6 @@
                     console.error(error);
                 }
             },
-
-
-        async iniciarSesion() {
-            // Buscar el usuario con el DNI proporcionado
-            const usuario = this.usuarios.find((user) => user.dni === this.dni);
-    
-            // Verificar si el usuario existe
-            if (usuario) {
-            // Verificar la contraseña usando passport para compararla con la encriptada
-            const contrasenaCorrecta = await passport.verificarContrasena(
-                this.pass,
-                usuario.pass
-            );
-  
-          if (contrasenaCorrecta) {
-            localStorage.setItem('isLogueado', 'true');
-            localStorage.setItem('usuarioLogueado', JSON.stringify(usuario));
-            this.errorMessage = ""; // Limpiar mensaje de error si las credenciales son correctas
-            alert("Inicio de sesión exitoso");
-            if (usuario.tipo.tipo === 'admin') {
-              localStorage.setItem('isAdmin', 'true');
-              this.$router.push({ name: 'inicio' }).then(() => {
-                window.location.reload();
-              });
-            } else {
-              this.$router.push({ name: 'empleo' }).then(() => {
-                window.location.reload();
-              });
-            }
-            // Redirigir o hacer algo después del inicio de sesión
-          } else {
-            this.errorMessage = "DNI o contraseña incorrectos. Inténtalo de nuevo.";
-          }
-        } else {
-          this.errorMessage = "DNI o contraseña incorrectos. Inténtalo de nuevo.";
-        }
-      }
-    }
-  };
   </script>
   
   <style scoped>

@@ -45,6 +45,23 @@ mounted() {
 },
 
 methods: {
+    guardarFactura() {
+        const productos = [];
+        let total = 0;
+
+        this.cartItems.forEach(producto => {
+            productos.push({
+                idProducto: producto._id,
+                precio: producto.precio,
+                cantidad: producto.quantity,
+                subtotal: producto.precio * producto.quantity,
+            });
+            total += producto.precio * producto.quantity;
+        });
+
+        let partesFecha = this.obtenerFechaHoy().split('/');
+        let fecha = `${partesFecha[2]}-${partesFecha[1]}-${partesFecha[0]}`;
+
         fetch('http://localhost:5000/facturas', {
             method: 'POST',
             headers: {
@@ -68,6 +85,71 @@ methods: {
                 total += element.quantity * element.precio;
             });
             return total;
+    },
+
+    generarFacturaPDF() {
+        if (this.cartItems.length === 0) {
+            console.error("No hay productos en el carrito, no se puede generar la factura.");
+            return;
+        }
+
+        const doc = new jsPDF();
+        const cart = this.cartItems;
+
+        doc.addImage(logo, 'png', 10, 10, 20, 20);
+
+        doc.setFontSize(18);
+        doc.text("Factura de Compra", 60, 20);
+
+        doc.setFontSize(9);
+        doc.text("Razón Social: Regalos Teis", 110, 50);
+        doc.text("Dirección: Avenida Galicia 101, Vigo - 36216", 110, 55);
+        doc.text("Tlfo: 986 666 333 - Email: regalos@example.com", 110, 60);
+        doc.text("Fecha: " + this.obtenerFechaHoy(), 110, 65);
+
+        const headers = [["ID", "Producto", "Cantidad", "Precio Unitario", "Total"]];
+        const data = cart.map((item) => [
+            item._id,
+            item.nombre,
+            item.quantity ,
+            `${item.precio.toFixed(2)} €`,
+            `${(item.quantity * item.precio).toFixed(2)} €`,
+        ]);
+
+        autoTable(doc, {
+            startY: 80,
+            head: headers,
+            body: data,
+            columnStyles: {
+                0: { halign: 'center' },
+                2: { halign: 'center' },
+                3: { halign: 'right' },
+                4: { halign: 'right' },
+            },
+            theme: 'striped',
+        });
+
+        const totalText = `Total: ${this.calcularTotal()} €`;
+
+        const pageWidth = doc.internal.pageSize.width;
+
+        const totalWidth = doc.getTextWidth(totalText);
+
+        const positionX = pageWidth - totalWidth - 14;
+        doc.setFont('helvetica', 'bold');
+        doc.setFontSize(12);
+
+        doc.text(totalText, positionX - 9, doc.lastAutoTable.finalY + 10);
+
+        doc.save("factura.pdf");
+    },
+
+    obtenerFechaHoy() {
+        const fecha = new Date();
+        const opciones = { day: '2-digit', month: '2-digit', year: 'numeric' };
+        const fechaFormateada = new Intl.DateTimeFormat('es-ES', opciones).format(fecha);
+        //return fecha.toLocaleDateString('es-ES');  // Formato dd/mm/yyyy
+        return fechaFormateada;
     },
 }
 };
