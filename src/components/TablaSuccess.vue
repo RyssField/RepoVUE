@@ -45,39 +45,7 @@ mounted() {
 },
 
 methods: {
-    guardarFactura() {
-        const productos = [];
-        let total = 0;
-
-        this.cartItems.forEach(producto => {
-            productos.push({
-                idProducto: producto._id,
-                precio: producto.precio,
-                cantidad: producto.quantity,
-                subtotal: producto.precio * producto.quantity,
-            });
-            total += producto.precio * producto.quantity;
-        });
-
-        let partesFecha = this.obtenerFechaHoy().split('/');
-        let fecha = `${partesFecha[2]}-${partesFecha[1]}-${partesFecha[0]}`;
-
-        fetch('http://localhost:5000/facturas', {
-            method: 'POST',
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                idcliente: this.usuarioLogueado.id,
-                productos: productos,
-                fecha: fecha,
-                total: total,
-            }),
-        })
-        .catch(error => {
-            console.error("Error al guardar la factura: " + error);
-        });
-    },
+    
 
     calcularTotal() {
             let total = 0
