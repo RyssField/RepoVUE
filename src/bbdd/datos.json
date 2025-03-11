@@ -33272,13 +33272,6 @@
       "avisoLegal": true
     },
     {
-      "id": "95fc",
-      "apellidos": "+iuiiu",
-      "nombre": "nihibh ",
-      "email": "bubh@uy.hg",
-      "movil": "678787677"
-    },
-    {
       "id": "09d5",
       "apellidos": "sdfsf",
       "nombre": "sdfsdfs",
@@ -33289,33 +33282,6 @@
         "id": "7f62"
       },
       "modalidad": "hibrido"
-    },
-    {
-      "id": "6a38",
-      "apellidos": "García García",
-      "nombre": "Adrián",
-      "email": "ad@ad.com",
-      "movil": "666666666",
-      "departamento": {
-        "nombre": "IT",
-        "id": "48e8"
-      },
-      "modalidad": "remoto",
-      "avisoLegal": true
-    },
-    {
-      "id": "e24f",
-      "apellidos": "Pintos Abreu",
-      "nombre": "Anxo",
-      "email": "anxo@gmail.com",
-      "movil": "604028346",
-      "departamento": {
-        "nombre": "Compras",
-        "id": "7f62"
-      },
-      "modalidad": "hibrido",
-      "avisoLegal": true,
-      "comentarios": "Buenas tardes, asssssssssssssssssssssfdassdddddddddddddddddddddddddddddddddddddddddddd sdf"
     },
     {
       "id": "ee43",
@@ -33400,48 +33366,6 @@
       "modalidad": "hibrido",
       "avisoLegal": true,
       "comentarios": "fgasdgagag"
-    },
-    {
-      "id": "21e4",
-      "apellidos": "García García",
-      "nombre": "Adrián",
-      "email": "afag@agas.com",
-      "movil": "666511559",
-      "departamento": {
-        "nombre": "IT",
-        "id": "48e8"
-      },
-      "modalidad": "hibrido",
-      "avisoLegal": true,
-      "comentarios": "adgagbsbsbssrgearg"
-    },
-    {
-      "id": "21e4",
-      "apellidos": "García García",
-      "nombre": "Adrián",
-      "email": "afag@agas.com",
-      "movil": "666511559",
-      "departamento": {
-        "nombre": "IT",
-        "id": "48e8"
-      },
-      "modalidad": "hibrido",
-      "avisoLegal": true,
-      "comentarios": "adgagbsbsbssrgearg"
-    },
-    {
-      "id": "21e4",
-      "apellidos": "García García",
-      "nombre": "AdriánA",
-      "email": "afag@agas.com",
-      "movil": "666511559",
-      "departamento": {
-        "nombre": "IT",
-        "id": "48e8"
-      },
-      "modalidad": "hibrido",
-      "avisoLegal": true,
-      "comentarios": "adgagbsbsbssrgearg"
     }
   ],
   "departamentos": [
@@ -33477,16 +33401,6 @@
     }
   ],
   "comentarios": [
-    {
-      "id": "d77e",
-      "clienteEmail": "juan.gomez@example.com",
-      "clienteMensaje": "Prueba1",
-      "fechaComentario": "10/12/2024",
-      "clienteMovil": "666666665",
-      "clienteValor": 1,
-      "lopd": true,
-      "nombre": "Juan"
-    },
     {
       "id": "5c09",
       "clienteEmail": "maria.lopez@example.com",
