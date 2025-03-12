@@ -55,13 +55,13 @@
             <tbody>
                 <tr>
                     <td class="text-center">Admin</td>
-                    <td class="text-center">51708605M</td>
-                    <td class="text-center">1234</td>
+                    <td class="text-center">78831986S</td>
+                    <td class="text-center">abc123</td>
                 </tr>
                 <tr>
                     <td class="text-center">Usuario</td>
-                    <td class="text-center">49996717F</td>
-                    <td class="text-center">1234</td>
+                    <td class="text-center">32731866Z</td>
+                    <td class="text-center">patata</td>
                 </tr>
             </tbody>
         </table>

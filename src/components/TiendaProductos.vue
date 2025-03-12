@@ -9,6 +9,8 @@
                 <label class="btn btn-success me-2" :for="'option-' + categoria">{{ categoria }}</label>
             </template>
 
+            <hr>
+            
             <table class="table">
                 <tbody>
                     <tr v-for="articulo in articulosFiltrados" :key="articulo._id">

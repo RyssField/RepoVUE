@@ -32709,663 +32709,95 @@
   ],
   "usuarios": [
     {
-      "dni": "12345678Z",
-      "alta": "01/01/2024",
-      "apellidos": "Gómez",
-      "nombre": "Juan",
-      "direccion": "Calle Falsa 123",
-      "email": "juan.gomez@example.com",
-      "provincia": {
-        "id": "28",
-        "nm": "Madrid"
-      },
-      "municipio": {
-        "id": "28005",
-        "nm": "Alcalá de Henares"
-      },
-      "baja": "",
-      "id": "d8cc",
-      "movil": "766666666"
-    },
-    {
-      "dni": "23456789B",
-      "alta": "02/01/2024",
-      "apellidos": "López Ruiz",
-      "nombre": "María",
-      "direccion": "Calle Verdadera 456",
-      "email": "maria.lopez@example.com",
-      "provincia": {
-        "id": "08",
-        "nm": "Barcelona"
-      },
-      "municipio": {
-        "id": "08187",
-        "nm": "Sabadell"
-      },
-      "baja": "21/11/2024",
-      "id": "3bc4",
-      "movil": "023131564"
-    },
-    {
-      "dni": "34567890C",
-      "alta": "03/01/2024",
-      "apellidos": "Fernández García",
-      "nombre": "Carlos",
-      "direccion": "Calle A 789",
-      "email": "carlos.fernandez@example.com",
-      "provincia": {
-        "id": "46",
-        "nm": "Valencia/València"
-      },
-      "municipio": {
-        "id": "46187",
-        "nm": "Palma de Gandía"
-      },
-      "baja": "",
-      "id": "4195",
-      "tipo": {
-        "id": "1",
-        "tipo": "usuario"
-      },
-      "movil": "666866669"
-    },
-    {
-      "dni": "45678901D",
-      "alta": "04/01/2024",
-      "apellidos": "Martínez Sánchez",
-      "nombre": "Laura",
-      "direccion": "Calle B 101",
-      "email": "laura.martinez@example.com",
-      "provincia": {
-        "id": "41",
-        "nm": "Sevilla"
-      },
-      "municipio": {
-        "id": "41059",
-        "nm": "Mairena del Aljarafe"
-      },
-      "baja": "30/10/2024",
-      "id": "95f2"
-    },
-    {
-      "dni": "56789012E",
-      "alta": "05/01/2024",
-      "apellidos": "García López",
-      "nombre": "José",
-      "direccion": "Calle C 202",
-      "email": "jose.garcia@example.com",
-      "provincia": {
-        "id": "29",
-        "nm": "Málaga"
-      },
-      "municipio": {
-        "id": "29069",
-        "nm": "Marbella"
-      },
-      "baja": "13/11/2024",
-      "id": "bbd2"
-    },
-    {
-      "dni": "67890123F",
-      "alta": "06/01/2024",
-      "apellidos": "Hernández Torres",
-      "nombre": "Ana",
-      "direccion": "Calle D 303",
-      "email": "ana.hernandez@example.com",
-      "provincia": {
-        "id": "50",
-        "nm": "Zaragoza"
-      },
-      "municipio": {
-        "id": "50067",
-        "nm": "Calatayud"
-      },
-      "baja": "06/03/2025",
-      "id": "c318"
-    },
-    {
-      "dni": "78901234G",
-      "alta": "07/01/2024",
-      "apellidos": "Moreno Romero",
-      "nombre": "Luis",
-      "direccion": "Calle E 404",
-      "email": "luis.moreno@example.com",
-      "provincia": {
-        "id": "18",
-        "nm": "Granada"
-      },
-      "municipio": {
-        "id": "18023",
-        "nm": "Baza"
-      },
-      "baja": "01/11/2024",
-      "id": "5f5f"
-    },
-    {
-      "dni": "89012345H",
-      "alta": "08/01/2024",
-      "apellidos": "Jiménez Ruiz",
-      "nombre": "Sofía",
-      "direccion": "Calle F 505",
-      "email": "sofia.jimenez@example.com",
-      "provincia": {
-        "id": "06",
-        "nm": "Badajoz"
-      },
-      "municipio": {
-        "id": "06044",
-        "nm": "Don Benito"
-      },
-      "baja": "06/03/2025",
-      "id": "b08c"
-    },
-    {
-      "dni": "90123456I",
-      "alta": "09/01/2024",
-      "apellidos": "Sánchez Pérez",
-      "nombre": "Pedro",
-      "direccion": "Calle G 606",
-      "email": "pedro.sanchez@example.com",
-      "provincia": {
-        "id": "45",
-        "nm": "Toledo"
-      },
-      "municipio": {
-        "id": "45165",
-        "nm": "Talavera de la Reina"
-      },
-      "baja": "",
-      "id": "80f6"
-    },
-    {
-      "dni": "11022344J",
-      "alta": "10/01/2024",
-      "apellidos": "Molina Ruiz",
-      "nombre": "Isabel",
-      "direccion": "Calle H 707",
-      "email": "isabel.molina@example.com",
-      "provincia": {
-        "id": "03",
-        "nm": "Alicante/Alacant"
-      },
-      "municipio": {
-        "id": "03009",
-        "nm": "Alcoy/Alcoi"
-      },
-      "baja": "",
-      "id": "a271"
-    },
-    {
-      "dni": "22033455K",
-      "alta": "11/01/2024",
-      "apellidos": "Vázquez Morales",
-      "nombre": "Ángel",
-      "direccion": "Calle I 808",
-      "email": "angel.vazquez@example.com",
-      "provincia": {
-        "id": "30",
-        "nm": "Murcia"
-      },
-      "municipio": {
-        "id": "30016",
-        "nm": "Cartagena"
-      },
-      "baja": "02/11/2024",
-      "id": "518e"
-    },
-    {
-      "dni": "33044566L",
-      "alta": "12/01/2024",
-      "apellidos": "Pérez Ruiz",
-      "nombre": "David",
-      "direccion": "Calle J 909",
-      "email": "david.perez@example.com",
-      "provincia": {
-        "id": "46",
-        "nm": "Valencia/València"
-      },
-      "municipio": {
-        "id": "46220",
-        "nm": "Sagunto/Sagunt"
-      },
-      "baja": "",
-      "id": "bba4"
-    },
-    {
-      "dni": "44055677M",
-      "alta": "13/01/2024",
-      "apellidos": "Cruz González",
-      "nombre": "Nuria",
-      "direccion": "Calle K 1011",
-      "email": "nuria.cruz@example.com",
-      "provincia": {
-        "id": "11",
-        "nm": "Cádiz"
-      },
-      "municipio": {
-        "id": "11031",
-        "nm": "San Fernando"
-      },
-      "baja": "",
-      "id": "08ed"
-    },
-    {
-      "dni": "55066788N",
-      "alta": "14/01/2024",
-      "apellidos": "Ríos Martín",
-      "nombre": "Diego",
-      "direccion": "Calle L 1213",
-      "email": "diego.rios@example.com",
-      "provincia": {
-        "id": "18",
-        "nm": "Granada"
-      },
-      "municipio": {
-        "id": "18089",
-        "nm": "Guadix"
-      },
-      "baja": "",
-      "id": "76d1"
-    },
-    {
-      "dni": "66077899O",
-      "alta": "15/01/2024",
-      "apellidos": "Reyes Castro",
-      "nombre": "Laura",
-      "direccion": "Calle M 1415",
-      "email": "laura.reyes@example.com",
-      "provincia": {
-        "id": "29",
-        "nm": "Málaga"
-      },
-      "municipio": {
-        "id": "29084",
-        "nm": "Ronda"
-      },
-      "baja": "",
-      "id": "a82c"
-    },
-    {
-      "dni": "77088900P",
-      "alta": "16/01/2024",
-      "apellidos": "Torres Jiménez",
-      "nombre": "Fernando",
-      "direccion": "Calle N 1617",
-      "email": "fernando.torres@example.com",
-      "provincia": {
-        "id": "50",
-        "nm": "Zaragoza"
-      },
-      "municipio": {
-        "id": "50089",
-        "nm": "Cuarte de Huerva"
-      },
-      "baja": "",
-      "id": "d1df"
-    },
-    {
-      "dni": "88090011Q",
-      "alta": "17/01/2024",
-      "apellidos": "Gómez López",
-      "nombre": "Elena",
-      "direccion": "Calle O 1819",
-      "email": "elena.gomez@example.com",
-      "provincia": {
-        "id": "28",
-        "nm": "Madrid"
-      },
-      "municipio": {
-        "id": "28058",
-        "nm": "Fuenlabrada"
-      },
-      "baja": "03/11/2024",
-      "id": "0402"
-    },
-    {
-      "dni": "99001122R",
-      "alta": "18/01/2024",
-      "apellidos": "Jiménez Pérez",
-      "nombre": "Álvaro",
-      "direccion": "Calle P 2021",
-      "email": "alvaro.jimenez@example.com",
-      "provincia": {
-        "id": "08",
-        "nm": "Barcelona"
-      },
-      "municipio": {
-        "id": "08015",
-        "nm": "Badalona"
-      },
-      "baja": "",
-      "id": "9340"
-    },
-    {
-      "dni": "10112233S",
-      "alta": "19/01/2024",
-      "apellidos": "López Gómez",
-      "nombre": "Verónica",
-      "direccion": "Calle Q 2223",
-      "email": "veronica.lopez@example.com",
-      "provincia": {
-        "id": "45",
-        "nm": "Toledo"
-      },
-      "municipio": {
-        "id": "45161",
-        "nm": "Seseña"
-      },
-      "baja": "",
-      "id": "1591"
-    },
-    {
-      "dni": "21123344T",
-      "alta": "20/01/2024",
-      "apellidos": "Martínez Rodríguez",
-      "nombre": "Javier",
-      "direccion": "Calle R 2425",
-      "email": "javier.martinez@example.com",
-      "provincia": {
-        "id": "41",
-        "nm": "Sevilla"
-      },
-      "municipio": {
-        "id": "41095",
-        "nm": "Utrera"
-      },
-      "baja": "04/11/2024",
-      "id": "2f9c"
-    },
-    {
-      "dni": "32134455U",
-      "alta": "21/01/2024",
-      "apellidos": "Hernández Castro",
-      "nombre": "Sara",
-      "direccion": "Calle S 2627",
-      "email": "sara.hernandez@example.com",
-      "provincia": {
-        "id": "18",
-        "nm": "Granada"
-      },
-      "municipio": {
-        "id": "18145",
-        "nm": "Ogíjares"
-      },
-      "baja": "",
-      "id": "964c"
-    },
-    {
-      "id": "4f22",
-      "dni": "11111111H",
-      "alta": "2024-11-14",
-      "apellidos": "Aasda",
-      "nombre": "Asdad",
-      "direccion": "asdad",
-      "email": "asda@adsasd.com",
-      "provincia": {
-        "id": "05",
-        "nm": "Ávila"
-      },
-      "municipio": {
-        "id": "05021",
-        "nm": "Barco de Ávila, El"
-      },
-      "baja": ""
-    },
-    {
-      "id": "fe16",
-      "dni": "22222222J",
-      "alta": "2024-11-26",
-      "apellidos": "Adasdasdgag",
-      "nombre": "fgadfgsdfgsdg",
-      "direccion": "sdfgsdgsfgsdg",
-      "email": "sdgsdfgs@sgagfa.com",
-      "provincia": {
-        "id": "05",
-        "nm": "Ávila"
-      },
-      "municipio": {
-        "id": "05002",
-        "nm": "Adrada, La"
-      },
-      "baja": ""
-    },
-    {
-      "id": "4cac",
-      "dni": "54471271A",
-      "alta": "2024-11-12",
-      "apellidos": "asdads",
-      "nombre": "afdaf",
-      "direccion": "afasfsafasfda",
-      "email": "fafasdf@afsdfa.com",
-      "provincia": {
-        "id": "02",
-        "nm": "Albacete"
-      },
-      "municipio": {
-        "id": "02002",
-        "nm": "Alatoz"
-      },
-      "baja": ""
-    },
-    {
-      "id": "6606",
-      "dni": "76049382C",
-      "alta": "2024-11-27",
-      "apellidos": "Lopez",
-      "nombre": "Lolo",
-      "direccion": "su casa",
-      "email": "lololo@gmail.com",
-      "provincia": {
-        "id": "22",
-        "nm": "Huesca"
-      },
-      "municipio": {
-        "id": "22124",
-        "nm": "Huerto"
-      },
-      "baja": "",
-      "movil": "666511233",
-      "tipo": {
-        "id": "1",
-        "tipo": "usuario"
-      }
-    },
-    {
-      "id": "b343",
-      "dni": "51708605M",
-      "alta": "2025-01-21",
+      "id": "659c",
+      "dni": "78831986S",
+      "alta": "2025-03-12",
       "apellidos": "Pintos Abreu",
       "nombre": "Anxo",
-      "direccion": "Si soy",
-      "email": "anxo@gmail.com",
+      "direccion": "Camiño Casal Do Viso, 24",
+      "email": "anxopintosabreu25@gmail.com",
       "provincia": {
         "id": "36",
         "nm": "Pontevedra"
       },
       "municipio": {
-        "id": "36057",
-        "nm": "Vigo"
+        "id": "36045",
+        "nm": "Redondela"
       },
       "baja": "",
-      "movil": "637586244",
+      "movil": "672705358",
       "tipo": {
         "id": "2",
         "tipo": "admin"
       },
-      "pass": "$2a$10$YeyC7zO0UbMzIx0X29xu1.NuIqjt0QvW5bPEfKkgRZZfgKdx4JgmK"
+      "pass": "$2b$10$HsIhmGFdiEW3R72CKHlSO.B4khtq4PRwAZ/uRKU96Um4pavEggEIG"
     },
     {
-      "id": "b204",
-      "dni": "54471270W",
-      "alta": "2025-01-22",
-      "apellidos": "Martínez Clavero",
-      "nombre": "Palo",
-      "direccion": "Su casa",
-      "email": "pablonocurra@gmail.com",
+      "id": "6ff8",
+      "dni": "32731866Z",
+      "alta": "2025-03-12",
+      "apellidos": "García López",
+      "nombre": "Alejandro",
+      "direccion": "Calle Mayor, 15, 1ºB",
+      "email": "alejandro.garcia@gmail.com",
       "provincia": {
-        "id": "36",
-        "nm": "Pontevedra"
+        "id": "28",
+        "nm": "Madrid"
       },
       "municipio": {
-        "id": "36057",
-        "nm": "Vigo"
+        "id": "28079",
+        "nm": "Madrid"
       },
       "baja": "",
-      "movil": "604028346",
+      "movil": "622334455",
       "tipo": {
         "id": "1",
         "tipo": "usuario"
       },
-      "pass": "$2a$10$fMKrx3GsHc46GClXZi1A0.Djp3A8AeVfKc9.UYOTjt/JvdUvRWUE."
-    },
-    {
-      "id": "523d",
-      "dni": "49996717F",
-      "alta": "2025-02-13",
-      "apellidos": "asdasd",
-      "nombre": "fafdadfas",
-      "direccion": "fafsdag",
-      "email": "asdafagasdg@asga.com",
-      "provincia": {
-        "id": "13",
-        "nm": "Ciudad Real"
-      },
-      "municipio": {
-        "id": "13017",
-        "nm": "Anchuras"
-      },
-      "baja": "",
-      "movil": "666511233",
-      "tipo": {
-        "id": "1",
-        "tipo": "usuario"
-      },
-      "pass": "$2a$10$YeyC7zO0UbMzIx0X29xu1.NuIqjt0QvW5bPEfKkgRZZfgKdx4JgmK"
+      "pass": "$2b$10$VZJ6TRyntsLG.DZQxLMcW.jpZJugFb6Y7AZgr/08heKLFavfo/VNm"
     }
   ],
   "candidatos": [
     {
-      "id": "8863",
-      "apellidos": "Martínez Clavero",
-      "nombre": "Pablo",
-      "email": "nocurro@gmail.com",
-      "movil": "604028346",
-      "departamento": {
-        "nombre": "Ventas",
-        "id": "569e"
-      },
-      "modalidad": "hibrido",
-      "avisoLegal": true,
-      "comentarios": "asdasddasd"
-    },
-    {
-      "id": "15ec",
-      "apellidos": "García García",
-      "nombre": "Adrián",
-      "email": "1.38@gmail.com",
-      "movil": "637138138",
-      "modalidad": "presencial",
-      "departamento": {
-        "nombre": "Logística",
-        "id": "d35a"
-      },
-      "avisoLegal": true
-    },
-    {
-      "id": "09d5",
-      "apellidos": "sdfsf",
-      "nombre": "sdfsdfs",
-      "email": "d@d.com",
-      "movil": "666666666",
-      "departamento": {
-        "nombre": "Compras",
-        "id": "7f62"
-      },
-      "modalidad": "hibrido"
-    },
-    {
-      "id": "ee43",
-      "apellidos": "pablito",
-      "nombre": "pablito",
-      "email": "clavito@gmail.com",
-      "movil": "604028346",
-      "departamento": {
-        "nombre": "Logística",
-        "id": "d35a"
-      },
-      "modalidad": "hibrido",
-      "avisoLegal": true,
-      "comentarios": "a\", \"test\": \"asdfg"
-    },
-    {
-      "id": "99a2",
-      "apellidos": "asdad",
-      "nombre": "asdasd",
-      "email": "asdadsa@adac.com",
-      "movil": "604028346",
+      "id": "6a38",
+      "apellidos": "Fernández Ruiz",
+      "nombre": "Lucía",
+      "email": "lucia.fernandez@example.com",
+      "movil": "611223344",
       "departamento": {
         "nombre": "IT",
         "id": "48e8"
       },
       "modalidad": "remoto",
-      "avisoLegal": true,
-      "comentarios": ""
+      "avisoLegal": true
     },
     {
-      "id": "648e",
-      "apellidos": "García García",
-      "nombre": "Adrián",
-      "email": "adr@sgaglaga.vom",
-      "movil": "666511233",
+      "id": "ee43",
+      "apellidos": "Romero Díaz",
+      "nombre": "Sofía",
+      "email": "sofia.romero@example.com",
+      "movil": "677889900",
       "departamento": {
-        "nombre": "IT",
-        "id": "48e8"
+        "nombre": "Logística",
+        "id": "d35a"
       },
       "modalidad": "hibrido",
       "avisoLegal": true,
-      "comentarios": "Afasghsdfhsbcbsbsr"
+      "comentarios": "Quisiera recibir información adicional sobre el próximo envío."
     },
     {
-      "id": "7ee5",
-      "apellidos": "García García",
-      "nombre": "Adrián",
-      "email": "adrg@agsga.com",
-      "movil": "666666665",
-      "departamento": {
-        "nombre": "Compras",
-        "id": "7f62"
-      },
-      "modalidad": "hibrido",
-      "avisoLegal": true,
-      "comentarios": "sdaghn asg asg asg ag agerag agfgdgfdgsfgsg erter 45a45afa sdf eaw5w54w3"
-    },
-    {
-      "id": "3530",
-      "apellidos": "García García",
-      "nombre": "Adrián",
-      "email": "adrg@agsga.com",
-      "movil": "666666665",
+      "id": "e24f",
+      "apellidos": "Sánchez López",
+      "nombre": "Martín",
+      "email": "martin.sanchez@example.com",
+      "movil": "633445566",
       "departamento": {
         "nombre": "Compras",
         "id": "7f62"
       },
-      "modalidad": "hibrido",
+      "modalidad": "presencial",
       "avisoLegal": true,
-      "comentarios": "sdaghn asg asg asg ag agerag agfgdgfdgsfgsg erter 45a45afa sdf eaw5w54w3"
-    },
-    {
-      "id": "e3f2",
-      "apellidos": "García García",
-      "nombre": "Adrián",
-      "email": "asdr@aghaga.com",
-      "movil": "666511233",
-      "departamento": {
-        "nombre": "IT",
-        "id": "48e8"
-      },
-      "modalidad": "hibrido",
-      "avisoLegal": true,
-      "comentarios": "fgasdgagag"
+      "comentarios": "Hola, quisiera confirmar la recepción del pedido anterior. Gracias."
     }
   ],
   "departamentos": [
@@ -33402,154 +32834,24 @@
   ],
   "comentarios": [
     {
-      "id": "5c09",
-      "clienteEmail": "maria.lopez@example.com",
-      "clienteMensaje": "Prueba2",
-      "fechaComentario": "10/12/2024",
-      "clienteMovil": "666666665",
-      "clienteValor": 3,
-      "lopd": true,
-      "nombre": "María"
-    },
-    {
-      "id": "176b",
-      "clienteEmail": "maria.lopez@example.com",
-      "clienteMensaje": "Prueba5",
-      "fechaComentario": "10/12/2024",
-      "clienteMovil": "666666665",
-      "clienteValor": 2,
-      "lopd": true,
-      "nombre": "María"
-    },
-    {
-      "id": "7fea",
-      "clienteEmail": "carlos.fernandez@example.com",
-      "clienteMensaje": "Otra prueba",
-      "fechaComentario": "10/12/2024",
-      "clienteMovil": "666666665",
-      "clienteValor": 5,
-      "lopd": true,
-      "nombre": "Carlos"
-    },
-    {
-      "id": "1ae4",
-      "clienteEmail": "laura.martinez@example.com",
-      "clienteMensaje": "test",
-      "fechaComentario": "10/12/2024",
-      "clienteMovil": "666666665",
-      "clienteValor": 4,
-      "lopd": true,
-      "nombre": "Laura"
-    },
-    {
-      "id": "00fc",
-      "clienteEmail": "jose.garcia@example.com",
-      "clienteMensaje": "",
-      "fechaComentario": "10/12/2024",
-      "clienteMovil": "666866669",
-      "clienteValor": 3,
-      "lopd": true,
-      "nombre": "José"
-    },
-    {
-      "id": "ff3f",
-      "clienteEmail": "jose.garcia@example.com",
-      "clienteMensaje": "asd",
-      "fechaComentario": "10/12/2024",
-      "clienteMovil": "666866669",
-      "clienteValor": 5,
-      "lopd": true,
-      "nombre": "José"
-    },
-    {
-      "id": "1411",
-      "clienteEmail": "jose.garcia@example.com",
-      "clienteMensaje": "Muy buena experiencia",
-      "fechaComentario": "10/12/2024",
-      "clienteMovil": "666866669",
-      "clienteValor": 3,
-      "lopd": true,
-      "nombre": "José"
-    },
-    {
-      "id": "cfef",
-      "clienteEmail": "laura.reyes@example.com",
-      "clienteMensaje": "a34",
-      "fechaComentario": "10/12/2024",
-      "clienteMovil": "666866669",
-      "clienteValor": 4,
-      "lopd": true,
-      "nombre": "Laura"
-    },
-    {
-      "id": "2633",
-      "clienteEmail": "fernando.torres@example.com",
-      "clienteMensaje": "a34jhga",
-      "fechaComentario": "10/12/2024",
-      "clienteMovil": "666866669",
+      "id": "fb1b",
+      "clienteEmail": "anxopintosabreu25@gmail.com",
+      "clienteMensaje": "No me ha gustado, cambialo.",
+      "fechaComentario": "12/03/2025",
+      "clienteMovil": "672705358",
       "clienteValor": 1,
       "lopd": true,
-      "nombre": "Fernando"
+      "nombre": "Anxo"
     },
     {
-      "id": "62aa",
-      "clienteEmail": "lololo@gmail.com",
-      "clienteMensaje": "sddddddd",
-      "fechaComentario": "10/12/2024",
-      "clienteMovil": "666866669",
-      "clienteValor": 3,
-      "lopd": true,
-      "nombre": "Lolo"
-    },
-    {
-      "id": "f4b7",
-      "clienteEmail": "fernando.torres@example.com",
-      "clienteMensaje": "Test34",
-      "fechaComentario": "10/12/2024",
-      "clienteMovil": "604028346",
-      "clienteValor": 3,
-      "lopd": true,
-      "nombre": "Fernando"
-    },
-    {
-      "id": "17d3",
-      "clienteEmail": "fernando.torres@example.com",
-      "clienteMensaje": "Test38",
-      "fechaComentario": "10/12/2024",
-      "clienteMovil": "604028346",
-      "clienteValor": 3,
-      "lopd": true,
-      "nombre": "Fernando"
-    },
-    {
-      "id": "4c09",
-      "clienteEmail": "laura.reyes@example.com",
-      "clienteMensaje": "",
-      "fechaComentario": "10/12/2024",
-      "clienteMovil": "666666665",
+      "id": "c289",
+      "clienteEmail": "alejandro.garcia@gmail.com",
+      "clienteMensaje": "Menuda pedazo de locura",
+      "fechaComentario": "12/03/2025",
+      "clienteMovil": "622334455",
       "clienteValor": 5,
       "lopd": true,
-      "nombre": "Laura"
-    },
-    {
-      "id": "2773",
-      "clienteEmail": "lololo@gmail.com",
-      "clienteMensaje": "lololo",
-      "fechaComentario": "10/12/2024",
-      "clienteMovil": "666666665",
-      "clienteValor": 2,
-      "lopd": true,
-      "nombre": "Lolo"
-    },
-    {
-      "id": "5142",
-      "clienteEmail": "pablonocurra@gmail.com",
-      "clienteMensaje": "afafsag",
-      "fechaComentario": "22/01/2025",
-      "clienteMovil": "604028346",
-      "clienteValor": 3,
-      "lopd": true,
-      "nombre": "Palo"
+      "nombre": "Alejandro"
     }
   ],
   "secret": "your_secret_key"
